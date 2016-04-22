@@ -1,0 +1,10 @@
+.wrapper_with_padding
+  #doc_show
+    %h1.title= @doc.title
+    .fr-view
+      %p= @doc.content.html_safe
+
+    .buttons
+      = link_to "All Documents", docs_path
+      = link_to "Edit Doc", edit_doc_path(@doc), class: "button"
+      = link_to "Delete Doc", doc_path(@doc), method: :delete, data: { confirm: "Sure to delete this?" }, class: "button"

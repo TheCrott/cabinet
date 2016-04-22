@@ -1,0 +1,12 @@
+= simple_form_for @doc do |f|
+  = f.input :title
+  #wysiwyg
+    = f.input :content
+  = f.button :submit, class: "button"
+
+:javascript
+  $(function() {
+    $('#wysiwyg').froalaEditor({
+      inlineMode: false
+    })
+  });
